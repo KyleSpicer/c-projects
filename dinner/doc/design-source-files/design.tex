@@ -1,0 +1,53 @@
+\usepackage[legalpaper, portrait, margin=1in]{geometry}
+\documentclass[12pt]{article}
+\usepackage{layout}
+
+\usepackage{titling}
+
+\begin{document}
+
+\title{Dinner Design Plan}
+\author{\Kyle Spicer\\ 170D WOBC \#22-02}
+\date{September 22, 2022}
+
+\maketitle
+
+\section{Project Summary}\label{Project Summary}
+Given a text file with up to 50 line of name / time to eat on each line, create a C program that can calculate what position a waiter should start collecting plates from diners in a clockwise manner to allow the most people to eat.
+
+\section{Architecture}\label{Architechture}
+
+\subsection{Data}
+    Experiment and find the best way to parse strings efficiently. Need to extract name and time left to store into individual variables.
+
+\subsection{Structures}
+\subsubsection{Constants}
+1. MAX\_PEOPLE 50\newline
+2. MAX\_LINE\_LENGTH 100\newline
+3. WAITER\_TIME 1
+
+\subsubsection{struct person\_t}
+1. char name[MAX\_LINE\_LENGTH]\newline
+2. int time\_left;
+
+\subsection{Significant Functions}
+1.  parse/pack struct with information\newline
+2.  ensure to loop through every possible position\newline
+3.  calculate / display most efficient starting position\newline
+4.  ensure to close file\newline
+5.  clean all allocated memory
+
+\subsection{User Interface}
+
+\section{Program Flow}\label{Program Flow}
+1. Make and run program with file name\newline
+2. Open / read file provided\newline
+3. Allocate memory container for struct pointers and structs\newline
+4. parse and pack each struct with proper information\newline
+5. begin looping through information to accomplish task\newline
+6. Print the starting name and the names of everyone
+
+
+\end{document}
+
+

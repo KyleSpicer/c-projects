@@ -1,0 +1,69 @@
+.TH dinner.1 "September 2022" "user manual"
+.SH NAME
+.PP
+dinner.c - 170D WOBC Module J Practical 1A
+.SH
+.PP
+.SH SYNOPSIS
+.PP
+usage - ./dinner [FILE]
+.PP
+.SH DESCRIPTION
+.PP
+Given a file of diners and the time it takes for them to complete their meal, the
+student must create a program to read the file and determine the best position 
+for a waiter to start collecting plates to allow the most patrons to complete 
+their meals. The program will calculate the waiter beginning at each guest and
+determine if their time remaining is equal to or less than the total time the 
+waiter has been collecting plates. If the patrons time is greater than the
+waiter's time, their plate is collected and they were not able to eat. The
+starting position that yields the most fed people will be displayed to the 
+terminal.
+.PP
+.SH FILES
+.PP
+dinner.c dinner-funcs.c dinner.h
+. creating a table to display struct with values
+.PP
+.SH STRUCTURES
+.PP
+. Display struct in table format
+.RS 1.2i
+.TS
+.tab(@), left, box;
+c | c
+rB | l.
+Structure@Values
+_
+typedef struct person_t@char name[MAX_LINE_LENGTH];
+@int  time_left;
+.TE
+.RE
+
+.SH FUNCTION DESCRIPTIONS
+.PP
+.SS person_t * make_person(char *temp_var)
+- parse line and return completed person struct.
+
+.SS int waiter_laps(person_t **container, int counter)
+- create loops for the amount of structs created
+
+.SS int individual_lap(person_t **container, int counter, int loop_count)
+- for each loop, calculate how many diners were able to eat
+
+.SS void display_most_fed_order(person_t **container, int counter, int loop_with_most_fed);
+- prints the most efficient loop and which people ate
+
+.SS void clean_that_memory(struct person_t **container_for_arrays, int counter);
+- free all memory allocations
+
+.SH ADDITIONAL FUNCTIONS USED
+.PP 
+fgets(), strcspn(), calloc(), sscanf(), strncpy(), free()
+
+.PP
+.SH AUTHOR
+CW2 Kyle Spicer, 170D Warrant Officer Basic Course
+
+contact email: kyle.d.spicer.mil@army.mil, kyledspicer@gmail.com
+
