@@ -16,7 +16,7 @@ TST_DIR := test
 SRCS := $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 
-BIN := yahtzee
+BIN := degrees                                             
 CHECK := $(BIN)_check
 
 TSTS := $(wildcard $(TST_DIR)/*.c)
