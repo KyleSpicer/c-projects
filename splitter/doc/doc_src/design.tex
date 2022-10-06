@@ -1,0 +1,50 @@
+\usepackage[legalpaper, portrait, margin=1in]{geometry}
+\documentclass[12pt]{article}
+\usepackage{layout}
+
+\begin{document}
+\title{Splitter Design}
+\author{\Kyle Spicer\\ 170D WOBC \#22-02}
+\date{October 6th, 2022}
+
+\maketitle
+
+\section{Project Summary:}\label{Project Summary}
+A musician is testing sequences of notes to see which phrases have good splits. A \textit{good split} of a sequence of notes is when the sequence can be split into two sub-strings, each with the same number of distinct letters. 
+\newline\newline
+For instance, 'ccbbab' has two possible good splits: "ccb, bab", "ccbb, ab"
+
+
+\section{Architecture:}\label{Architecture}
+Experiment and find the best way to read in strings, validate, and store the information for further use. Determine what the most efficient way is to store and utilize data.
+\subsection{Data}
+1. Make file with appropriate flags / targets\newline
+2. splitter.c splitter.h splitter-funcs.c\newline
+3. design doc, writeup, test plan (must be PDFs)\newline
+
+\subsection{Constants}
+1. MAX\_LINE\_LENGTH 128
+
+\subsection{Significant Functions}
+1. read in the file \newline
+2. validate input \newline
+3. parse strings \newline
+4. logic for algorithm \newline
+5. displaying results\newline
+6. close file
+
+\newline
+
+
+\section{Program Flow:}\label{Program Flow}
+1. open file, if unable to open file prompt for user input\newline
+2. read in a single line, if line isn't ASCII letter, publish error message\newline
+3. if line is valid, calculate how many \textit{good splits} are possible and print\newline
+4. continue reading/printing until EOF is reached\newline
+5. close file prior to exiting program\newline
+\newline
+
+
+\end{document}
+
+

@@ -1,0 +1,34 @@
+\usepackage[legalpaper, portrait, margin=1in]{geometry}
+\documentclass[12pt]{article}
+\usepackage{layout}
+
+\begin{document}
+\title{Splitter WriteUp}
+\author{\Kyle Spicer\\ 170D WOBC \#22-02}
+\date{October 6th, 2022}
+
+\maketitle
+
+\section{Project Summary:}\label{Project Summary}
+"A musician is testing sequences of notes to see which phrases have good splits. A good split of a sequence of notes is when the sequence can be split into two sub-strings, each with the same number of distinct letters."
+\newline
+\newline
+We must create a program that accepts lines from a file or user input to accept strings. Then determine if the string is valid (128 alphabet characters only). If the string is valid, we must complete logic and display which sub-strings contain the same amount of unique characters.
+
+\section{Challenges:}\label{Challenges}
+Logic - When we first received this project, I was not sure how to accomplish the task. There was quite a bit of trial and error with splitting the string into proper sub-strings. Then attempting to verify how many unique characters were in each sub-string.
+\newline
+\newline
+Makefile - We have been building our makefiles for projects, however, there was some logic that needed manipulation to get the following targets to work appropriately: clean, check, profile, debug.
+\section{Successes:}\label{Successes}
+Design - For this project I focused on maintaining modular code and minimizing my main function length. Usually, I would write the code in the main function and use functions very seldom. However, I was able to take my time and think out what functions I would like to implement. This made creating and using the functions rather easily.
+\newline
+\newline
+Unit Testing - This was the first project where unit testing was required. I did not have any experience with creating unit tests, but I was able to create and validate functions rather quickly.
+
+\section{Lessons Learned:}\label{Lessons Learned}
+Unit testing - When completing unit testing, I found it difficult to attempt to test functions that returned void. In the future, I will think my functions out and try to return something other than void to allow me to test the functions properly.
+
+
+
+\end{document}
