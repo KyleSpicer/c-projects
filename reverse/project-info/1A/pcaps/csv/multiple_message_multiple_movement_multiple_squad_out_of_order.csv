@@ -1,0 +1,12 @@
+type,source_id,dest_id,sequence_id,message,azimuth,inclination,distance,speed
+1,1,23,5,,-30.0,90.0,1.0,14.0
+1,1,23,3,,200.0,100.0,7.0,3.0
+1,1,25,8,,-200.0,-100.0,7.0,3.0
+0,1,25,4,Arm photon cannons,,,,
+1,1,23,1,,100.0,200.0,10.0,1.0
+0,1,23,6,Scan system for lifeforms,,,,
+0,1,23,10,Exterminate at will,,,,
+1,1,25,11,,30.0,-90.0,1.0,14.0
+1,1,25,7,,-100.0,-200.0,10.0,1.0
+0,1,25,9,Obliterate,,,,
+0,1,23,2,Arm torpedoes,,,,

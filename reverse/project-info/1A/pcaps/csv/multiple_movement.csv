@@ -1,0 +1,4 @@
+type,source_id,dest_id,sequence_id,message,azimuth,inclination,distance,speed
+1,1,23,1,,100.0,200.0,10.0,1.0
+1,1,23,2,,200.0,100.0,7.0,3.0
+1,1,23,3,,-30.0,90.0,1.0,14.0
