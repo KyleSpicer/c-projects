@@ -3,42 +3,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <getopt.h>
 
 int find_average(int num_args, ...)
 {
-    va_list args;
-    va_start(args, num_args);
-    
+    va_list arg_ptr;
+    va_start(arg_ptr, num_args);
+    printf("argv = %s\n", &arg_ptr);
     int arg_sum = 0;
 
     for (int i = 0; i < num_args; i++)
     {
-        int x = va_arg(args, int);
+        int x = va_arg(arg_ptr, int);
         arg_sum += x;       
     }
     
-    int average = (arg_sum / num_args);
+    int average = (arg_sum / num_args - 1);
     
-    va_end(args);
+    va_end(arg_ptr);
 
     return average;
 }
 
+// void parse_string_to_ints(int argc, char *argv[])
+// {
+//     while(argc)
+//     {
+//         printf("argv = %s\t argc = %d\n", argv[argc], argc);
+//     }
+// }
 
-int main()
+int main(int argc, char *argv[])
 {
-    int average = find_average(3, 10, 15, 5);
-    printf("average = %d\n", average);
-    
-    // if (argc < 2)
-    // {
-    //     printf("Usage: ./averages 2 4 6\n");
-    //     exit(1);
-    // }
-    // else
-    // {
-        // printf("argc = %d \t argv = %s\n\n\n", argc, argv);
-        // int average = find_average(argc, argv);
-        // printf("average = %d\n", average);
-    // }
+    printf("argv = %s\n", *argv);
+
+    // int numbers_from_input = parse_string_to_ints(argc, *argv);    
+    int average = find_average((argc - 1), *argv);
+    printf("Average = %d\n", average);
 }
