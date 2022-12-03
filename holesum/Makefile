@@ -48,11 +48,11 @@ valgrind: $(BIN)
 
 break: $(BIN)
 	for element in {1..20} ; do \
-		./$(BIN) /dev/random > /dev/null 2> error.log; \
+		./$(BIN) /dev/urandom > /dev/null 2> error.log; \
 	done
 
 run: $(BIN)
-	./$(BIN) test/test4
+	./$(BIN) test/test3
 
 $(OBJ_DIR):
 	@mkdir -p $@

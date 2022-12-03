@@ -60,6 +60,10 @@ int main(int argc, char *argv[])
 		char previous;
 		do {
 			buffer = fgetc(fp);
+			if(0 == total_nodes && '\0' == buffer){
+				printf("Thanks for checking /dev/zero\n");
+				exit(1);
+			}
 			if ('\n' == buffer && '\n' == previous) {
 				goto NEXT_ROUND;
 			}
@@ -77,6 +81,7 @@ int main(int argc, char *argv[])
 
 		} while (EOF != buffer);
 
+		/* determine number of columns */
 		columns = total_nodes / rows;
 
 		/* checking to ensure columns and rows create proper matrix */
